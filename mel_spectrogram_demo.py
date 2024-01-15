@@ -58,4 +58,9 @@ if __name__ == '__main__':
     # Convert mel spectrogram to audio
     reconstructed_audio = MEL.invert_feature(phase, mel_spectrogram)
 
+    if len(audio) > len(reconstructed_audio):
+        reconstructed_audio = np.resize(reconstructed_audio, audio.shape)
+    else:
+        reconstructed_audio = reconstructed_audio[:len(audio)]
+
     soundfile.write('./output.wav', reconstructed_audio, sr)
