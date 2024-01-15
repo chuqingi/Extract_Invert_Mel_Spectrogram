@@ -1,3 +1,8 @@
+'''
+Developer: Jiaxin Li
+E-mail: 1319376761@qq.com
+Github: https://github.com/chuqingi/Extract_Invert_Mel_Spectrogram
+'''
 import librosa
 import soundfile
 import numpy as np
